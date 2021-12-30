@@ -6,7 +6,7 @@ void setup() {
   pinMode(11, OUTPUT);
   pinMode(3, OUTPUT);
 }
-const int BUFFER_SIZE = 200;
+const int BUFFER_SIZE = 4;
 byte buf[BUFFER_SIZE];
 
 void loop() {

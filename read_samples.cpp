@@ -6,7 +6,7 @@
 #include "lib/serialib.h"
 
 #define SAMPLE_BUFFER_SIZE 512
-#define SERIAL_BUFFER 100
+#define SERIAL_BUFFER 4
 #define SENSITIVITY 10
 
 // double const MAX_SIGNAL = 1 << 16;
