@@ -5,9 +5,10 @@
 #include <stdint.h>
 #include "lib/serialib.h"
 
-#define SAMPLE_BUFFER_SIZE 512
+#define SAMPLE_BUFFER_SIZE 1024
 #define SERIAL_BUFFER 4
-#define SENSITIVITY 10
+#define SENSITIVITY 15
+#define BAUDRATE 115200
 
 // double const MAX_SIGNAL = 1 << 16;
 // double const MAX_DB = log10( 1/MAX_SIGNAL) * 20;
@@ -36,8 +37,8 @@ double average_buffer(int16_t * buffer, int size);
 int main() {
     bool const passthrough = false;
 
-    if (serial.openDevice("/dev/ttyACM0", 115200)!=1) {
-        printf("Error opening serial port. \n");
+    if (serial.openDevice(arduino_serial, BAUDRATE)!=1) {
+        printf("Error opening serial port. %s\n", arduino_serial);
         return -1;
     }
     uint8_t serbuf[SERIAL_BUFFER];
