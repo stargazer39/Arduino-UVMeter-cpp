@@ -1,6 +1,6 @@
-# Arduino-UVMeter-cpp
+# Arduino-VUMeter-Cpp
 
-## Arduino UV meter written in c++
+## Arduino VU meter written in c++
 ### Only for linux with PulseAudio
 
 ```libpulse``` is required to compile the code.
